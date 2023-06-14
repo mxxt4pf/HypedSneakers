@@ -15,8 +15,9 @@ In-Development:
 To do:
 -Additional functional requirements for the client app
 -Creating enhancements for the UI for appealing web pages
--Refactoring of the entire code for keeping the code clean, simple and efficient
+-Integrating the API for product catalog, payment API, etc.
 -Created the whole database, automapper, crud operations, payment API (biggest challenege) 
 -Implementing Material UI 
 -Paging, sorting, searching, filtering
+-Refactoring of the entire code for keeping the code clean, simple and efficient
 
