@@ -6,6 +6,7 @@ making payments using their preferred mode of payment, and much more.
 What is Done?
 -Setting of the development platform and created a ASP.NetCore Web API project 
 -Implemented Entity Framework for Migration, Database manipulation and working around with DB queries 
+-Used Swagger UI for API testing of database queries by creating document reports in JSON chekcing the end points of the methods.
 
 In-Development:
 -Builidng the client app using react with functionalities, error handling, etc 
