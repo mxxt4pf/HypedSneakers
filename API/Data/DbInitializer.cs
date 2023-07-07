@@ -16,199 +16,183 @@ namespace API.Data
             {
                 new Product
                 {
-                    Name = "Angular Speedster Board 2000",
-                    Description =
-                        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-                    Price = 20000,
-                    ImageUrl = "/images/products/sb-ang1.png",
-                    Brand = "Angular",
-                    Type = "Boards",
-                    QuantityInStock = 100
+                    Name = "Nike Blazer Mid",
+                    Description ="Workout shoe and tennis purpose.",
+                    Price = 935,
+                    ImageUrl = "",
+                    Brand = "Nike",
+                    Type = "Sneaker",
+                    QuantityInStock = 999
                 },
                 new Product
                 {
-                    Name = "Green Angular Board 3000",
-                    Description = "Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.",
-                    Price = 15000,
+                    Name = "Nike Air Force 1",
+                    Description ="Shoe Description to be added",
+                    Price = 95990,
                     ImageUrl = "/images/products/sb-ang2.png",
-                    Brand = "Angular",
-                    Type = "Boards",
-                    QuantityInStock = 100
+                    Brand = "Nike",
+                    Type = "Sneaker",
+                    QuantityInStock = 999
                 },
                 new Product
                 {
-                    Name = "Core Board Speed Rush 3",
-                    Description =
-                        "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
-                    Price = 18000,
-                    ImageUrl = "/images/products/sb-core1.png",
-                    Brand = "NetCore",
-                    Type = "Boards",
-                    QuantityInStock = 100
+                    Name = "New Balance",
+                    Description ="Shoe Description to be added",
+                    Price = 98990,
+                    ImageUrl = "/images/products/sb-core9.png",
+                    Brand = "New Balance",
+                    Type = "Sneaker",
+                    QuantityInStock = 999
                 },
                 new Product
                 {
-                    Name = "Net Core Super Board",
-                    Description =
-                        "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
-                    Price = 30000,
+                    Name = "New Balance",
+                    Description ="Shoe Description to be added",
+                    Price = 39999,
                     ImageUrl = "/images/products/sb-core2.png",
-                    Brand = "NetCore",
-                    Type = "Boards",
-                    QuantityInStock = 100
+                    Brand = "New Balance",
+                    Type = "Sneaker",
+                    QuantityInStock = 999
                 },
                 new Product
                 {
-                    Name = "React Board Super Whizzy Fast",
-                    Description =
-                        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-                    Price = 25000,
-                    ImageUrl = "/images/products/sb-react1.png",
-                    Brand = "React",
-                    Type = "Boards",
-                    QuantityInStock = 100
+                    Name = "New Balance",
+                    Description ="New Balance Canvas Trainer",
+                    Price = 25990,
+                    ImageUrl = "/images/products/sb-NewBalance9.png",
+                    Brand = "NewBalance",
+                    Type = "Sneaker",
+                    QuantityInStock = 999
                 },
                 new Product
                 {
-                    Name = "Typescript Entry Board",
-                    Description =
-                        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-                    Price = 12000,
-                    ImageUrl = "/images/products/sb-ts1.png",
-                    Brand = "TypeScript",
-                    Type = "Boards",
-                    QuantityInStock = 100
+                    Name = "New Balance",
+                    Description ="New Balance Canvas Trainer",
+                    Price = 92990,
+                    ImageUrl = "/images/products/sb-ts9.png",
+                    Brand = "New Balance",
+                    Type = "Sneaker",
+                    QuantityInStock = 999
                 },
                 new Product
                 {
-                    Name = "Core Blue Hat",
-                    Description =
-                        "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-                    Price = 1000,
-                    ImageUrl = "/images/products/hat-core1.png",
-                    Brand = "NetCore",
-                    Type = "Hats",
-                    QuantityInStock = 100
+                    Name = "Adidas",
+                    Description ="Shoe Description to be added",
+                    Price = 9990,
+                    ImageUrl = "/images/products/hat-core9.png",
+                    Brand = "New Balance",
+                    Type = "Shoes",
+                    QuantityInStock = 999
                 },
                 new Product
                 {
-                    Name = "Green React Woolen Hat",
-                    Description =
-                        "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-                    Price = 8000,
-                    ImageUrl = "/images/products/hat-react1.png",
-                    Brand = "React",
-                    Type = "Hats",
-                    QuantityInStock = 100
+                    Name = "Adidas",
+                    Description ="Shoe Description to be added",
+                    Price = 8990,
+                    ImageUrl = "/images/products/hat-NewBalance9.png",
+                    Brand = "New Balance",
+                    Type = "Shoes",
+                    QuantityInStock = 999
                 },
                 new Product
                 {
-                    Name = "Purple React Woolen Hat",
-                    Description =
-                        "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-                    Price = 1500,
-                    ImageUrl = "/images/products/hat-react2.png",
-                    Brand = "React",
-                    Type = "Hats",
-                    QuantityInStock = 100
+                    Name = "Adidas",
+                    Description ="Shoe Description to be added",
+                    Price = 9599,
+                    ImageUrl = "/images/products/hat-NewBalance2.png",
+                    Brand = "New Balance",
+                    Type = "Shoes",
+                    QuantityInStock = 999
                 },
                 new Product
                 {
-                    Name = "Blue Code Gloves",
-                    Description =
-                        "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-                    Price = 1800,
-                    ImageUrl = "/images/products/glove-code1.png",
-                    Brand = "VS Code",
-                    Type = "Gloves",
-                    QuantityInStock = 100
+                    Name = "Adidas Yeezy Boost 350 V2",
+                    Description ="Shoe Description to be added",
+                    Price = 9899,
+                    ImageUrl = "/images/products/glove-code9.png",
+                    Brand = "Adidas",
+                    Type = "Sneakers",
+                    QuantityInStock = 999
                 },
                 new Product
                 {
-                    Name = "Green Code Gloves",
-                    Description =
-                        "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-                    Price = 1500,
+                    Name = "Adidas Yeezy Boost 700",
+                    Description ="Shoe Description to be added",
+                    Price = 9599,
                     ImageUrl = "/images/products/glove-code2.png",
-                    Brand = "VS Code",
-                    Type = "Gloves",
-                    QuantityInStock = 100
+                    Brand = "Adidas",
+                    Type = "Sneakers",
+                    QuantityInStock = 999
                 },
                 new Product
                 {
-                    Name = "Purple React Gloves",
-                    Description =
-                        "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-                    Price = 1600,
-                    ImageUrl = "/images/products/glove-react1.png",
-                    Brand = "React",
-                    Type = "Gloves",
-                    QuantityInStock = 100
+                    Name = "Adidas Yeezy Slides",
+                    Description ="Shoe Description to be added",
+                    Price = 9699,
+                    ImageUrl = "/images/products/glove-NewBalance9.png",
+                    Brand = "Adidas",
+                    Type = "Slides",
+                    QuantityInStock = 999
                 },
                 new Product
                 {
-                    Name = "Green React Gloves",
-                    Description =
-                        "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-                    Price = 1400,
-                    ImageUrl = "/images/products/glove-react2.png",
-                    Brand = "React",
-                    Type = "Gloves",
-                    QuantityInStock = 100
+                    Name = "Adidas Yeezy Slides Onyx",
+                    Description ="Shoe Description to be added",
+                    Price = 9499,
+                    ImageUrl = "/images/products/glove-NewBalance2.png",
+                    Brand = "NewBalance",
+                    Type = "Slides",
+                    QuantityInStock = 999
                 },
                 new Product
                 {
-                    Name = "Redis Red Boots",
-                    Description =
-                        "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
-                    Price = 25000,
-                    ImageUrl = "/images/products/boot-redis1.png",
-                    Brand = "Redis",
-                    Type = "Boots",
-                    QuantityInStock = 100
+                    Name = "Puma ",
+                    Description ="Shoe Description to be added",
+                    Price = 25990,
+                    ImageUrl = "/images/products/boot-redis9.png",
+                    Brand = "Puma",
+                    Type = "Trainer Shoes",
+                    QuantityInStock = 999
                 },
                 new Product
                 {
-                    Name = "Core Red Boots",
-                    Description =
-                        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-                    Price = 18999,
+                    Name = "Puma ",
+                    Description ="New Balance Canvas Trainer",
+                    Price = 98999,
                     ImageUrl = "/images/products/boot-core2.png",
-                    Brand = "NetCore",
-                    Type = "Boots",
-                    QuantityInStock = 100
+                    Brand = "New Balance",
+                    Type = "Trainer Shoes",
+                    QuantityInStock = 999
                 },
                 new Product
                 {
-                    Name = "Core Purple Boots",
-                    Description =
-                        "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
-                    Price = 19999,
-                    ImageUrl = "/images/products/boot-core1.png",
-                    Brand = "NetCore",
-                    Type = "Boots",
-                    QuantityInStock = 100
+                    Name = "Puma ",
+                    Description ="Shoe Description to be added",
+                    Price = 99999,
+                    ImageUrl = "/images/products/boot-core9.png",
+                    Brand = "New Balance",
+                    Type = "Trainer Shoes",
+                    QuantityInStock = 999
                 },
                 new Product
                 {
-                    Name = "Angular Purple Boots",
-                    Description = "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.",
-                    Price = 15000,
+                    Name = "Nike Jordan 1",
+                    Description = "Shoe Description to be added",
+                    Price = 95990,
                     ImageUrl = "/images/products/boot-ang2.png",
-                    Brand = "Angular",
-                    Type = "Boots",
-                    QuantityInStock = 100
+                    Brand = "Nike",
+                    Type = "Basketball Shoes",
+                    QuantityInStock = 999
                 },
                 new Product
                 {
-                    Name = "Angular Blue Boots",
-                    Description =
-                        "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
-                    Price = 18000,
-                    ImageUrl = "/images/products/boot-ang1.png",
-                    Brand = "Angular",
-                    Type = "Boots",
-                    QuantityInStock = 100
+                    Name = "Nike Jordan 2",
+                    Description ="Shoe Description to be added",
+                    Price = 98990,
+                    ImageUrl = "/images/products/boot-ang9.png",
+                    Brand = "Nike",
+                    Type = "Basketball Shoes",
+                    QuantityInStock = 999
                 },
             };
            //context.Products.AddRange(products);
