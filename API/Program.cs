@@ -16,6 +16,9 @@ builder.Services.AddDbContext<SaveContext>(opt => {
     opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
+//added CORS configuration to the API
+builder.Services.AddCors();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -24,7 +27,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+//for enabling CORS header send back to clientapp
+app.UseCors(opt => 
+{
+    opt.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:3000");
+});
 app.UseAuthorization();
 
 app.MapControllers();
