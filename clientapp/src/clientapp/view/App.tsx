@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import Appbar from "./Appbar";
 import { dark, light } from "@mui/material/styles/createPalette";
+import { Outlet } from "react-router-dom";
 
 function ClientApp() {
   const [modeType, setModeType] = useState(false);
@@ -34,7 +35,7 @@ function ClientApp() {
         <CssBaseline> </CssBaseline>
         <Appbar themeMode={modeType} themeSwitch={themeSwitch}></Appbar>
         <Container>
-          <ProductCatalog />
+          <Outlet />
         </Container>
       </ThemeProvider>
     </div>

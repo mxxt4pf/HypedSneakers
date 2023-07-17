@@ -12,6 +12,9 @@ import {
   CardHeader,
 } from "@mui/material";
 import { Product } from "../../clientapp/model/Product";
+import { Link } from "react-router-dom";
+import ProductCatalog from "./ProductCatalog";
+import ItemInfo from "./ItemInfo";
 
 interface Props {
   product: Product;
@@ -59,7 +62,13 @@ export default function ItemCard({ product }: Props) {
       </CardContent>
       <CardActions>
         <Button size="medium">Add Item</Button>
-        <Button size="medium">Preview</Button>
+        <Button
+          size="medium"
+          component={Link}
+          to={`/productcatalog/${product.id}`} //Item details baseed on item id
+        >
+          Preview
+        </Button>
       </CardActions>
     </Card>
   );

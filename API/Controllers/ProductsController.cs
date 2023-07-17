@@ -14,7 +14,7 @@ namespace API.Controllers
 
     public class ProductsController : ControllerBase 
     {
-        //private field for dependecy injection
+        //private field for dependency injection
         private readonly SaveContext _context;
         
         public ProductsController(SaveContext context)
