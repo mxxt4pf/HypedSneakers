@@ -22,7 +22,7 @@ interface Props {
 
 const featureLinks = [
   {
-    title: "aboutus",
+    title: "Aboutus",
     path: "/aboutus",
   },
   {
@@ -36,11 +36,11 @@ const featureLinks = [
 ];
 const signupLinks = [
   {
-    title: "login",
+    title: "Login",
     path: "/login",
   },
   {
-    title: "signup",
+    title: "Signup",
     path: "/signup",
   },
 ];
