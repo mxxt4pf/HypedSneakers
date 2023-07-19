@@ -10,11 +10,13 @@ import {
   CardMedia,
   Typography,
   CardHeader,
+  Box,
 } from "@mui/material";
 import { Product } from "../../clientapp/model/Product";
 import { Link } from "react-router-dom";
 import ProductCatalog from "./ProductCatalog";
 import ItemInfo from "./ItemInfo";
+import { AlignHorizontalLeft, ForkLeft } from "@mui/icons-material";
 
 interface Props {
   product: Product;
@@ -60,15 +62,21 @@ export default function ItemCard({ product }: Props) {
           {product.brand} / {product.type}
         </Typography>
       </CardContent>
+
       <CardActions>
-        <Button size="medium">Add Item</Button>
-        <Button
-          size="medium"
-          component={Link}
-          to={`/productcatalog/${product.id}`} //Item details baseed on item id
-        >
-          Preview
-        </Button>
+        <Box display={"flex"} alignItems={"left"}>
+          <Button size="medium">Add Item</Button>
+        </Box>
+
+        <Box>
+          <Button
+            size="medium"
+            component={Link}
+            to={`/productcatalog/${product.id}`} //Item details baseed on item id
+          >
+            Preview Item
+          </Button>
+        </Box>
       </CardActions>
     </Card>
   );

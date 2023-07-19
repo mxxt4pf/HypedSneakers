@@ -13,7 +13,7 @@ import {
 } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 interface Props {
   themeMode: boolean;
@@ -110,6 +110,8 @@ export default function Appbar({ themeMode, themeSwitch }: Props) {
         </List>
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <IconButton
+            component={Link}
+            to="/cartpage"
             edge="start"
             size="small"
             sx={{ color: "darkgray", margin: 1 }}

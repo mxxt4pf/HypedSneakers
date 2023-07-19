@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using API.Data;
 using API.Entities;
 using Microsoft.AspNetCore.Mvc;
@@ -12,7 +8,7 @@ namespace API.Controllers
     [ApiController]
     [Route("api/[controller]")]
 
-    public class ProductsController : ControllerBase 
+    public class ProductsController : RootApiController 
     {
         //private field for dependency injection
         private readonly SaveContext _context;

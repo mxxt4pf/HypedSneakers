@@ -12,6 +12,7 @@ namespace API.Data
         public SaveContext(DbContextOptions options) : base(options)
         {
         }
-        public DbSet<Product> Products { get; set; } //represent the table for db
-    }
+        public DbSet<Product> Products { get; set; } //represent the table for products
+        public DbSet<ShoppingCart> Carts {get; set;} //table for shopping cart
+}
 }

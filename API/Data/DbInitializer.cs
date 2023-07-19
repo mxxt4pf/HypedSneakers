@@ -18,90 +18,90 @@ namespace API.Data
                 {
                     Name = "Nike Blazer Mid",
                     Description ="Workout shoe and tennis purpose.",
-                    Price = 935,
-                    ImageUrl = "",
+                    Price = 99,
+                    ImageUrl = "/images/products/1nikeblazer.jpeg",
                     Brand = "Nike",
-                    Type = "Sneaker",
+                    Type = "Sneakers",
                     QuantityInStock = 999
                 },
                 new Product
                 {
                     Name = "Nike Air Force 1",
                     Description ="Shoe Description to be added",
-                    Price = 95990,
-                    ImageUrl = "/images/products/sb-ang2.png",
+                    Price = 100,
+                    ImageUrl = "/images/products/2nikeairforce1.jpeg",
                     Brand = "Nike",
-                    Type = "Sneaker",
+                    Type = "Sneakers",
                     QuantityInStock = 999
                 },
                 new Product
                 {
-                    Name = "New Balance",
+                    Name = "Nike Air Force 1 Mid",
                     Description ="Shoe Description to be added",
-                    Price = 98990,
-                    ImageUrl = "/images/products/sb-core9.png",
-                    Brand = "New Balance",
-                    Type = "Sneaker",
+                    Price = 100,
+                    ImageUrl = "/images/products/3airforce1mid.jpeg",
+                    Brand = "Nike",
+                    Type = "Sneakers",
                     QuantityInStock = 999
                 },
                 new Product
                 {
-                    Name = "New Balance",
+                    Name = "New Balance 574 ",
                     Description ="Shoe Description to be added",
                     Price = 39999,
-                    ImageUrl = "/images/products/sb-core2.png",
+                    ImageUrl = "/images/products/4newblance574.jpeg",
                     Brand = "New Balance",
-                    Type = "Sneaker",
+                    Type = "Sport Shoes",
                     QuantityInStock = 999
                 },
                 new Product
                 {
-                    Name = "New Balance",
+                    Name = "New Balance 550",
                     Description ="New Balance Canvas Trainer",
                     Price = 25990,
-                    ImageUrl = "/images/products/sb-NewBalance9.png",
-                    Brand = "NewBalance",
-                    Type = "Sneaker",
+                    ImageUrl = "/images/products/5.jpeg",
+                    Brand = "New Balance",
+                    Type = "Sport Shoes",
                     QuantityInStock = 999
                 },
                 new Product
                 {
-                    Name = "New Balance",
+                    Name = "New Balance 327",
                     Description ="New Balance Canvas Trainer",
                     Price = 92990,
-                    ImageUrl = "/images/products/sb-ts9.png",
+                    ImageUrl = "//images/products/6.jpeg",
                     Brand = "New Balance",
-                    Type = "Sneaker",
+                    Type = "Sport shoes",
                     QuantityInStock = 999
                 },
                 new Product
                 {
-                    Name = "Adidas",
+                    Name = "Vans old skool",
                     Description ="Shoe Description to be added",
                     Price = 9990,
-                    ImageUrl = "/images/products/hat-core9.png",
-                    Brand = "New Balance",
-                    Type = "Shoes",
+                    ImageUrl = "/images/products/7.jpeg",
+                    Brand = "Vans",
+                    Type = "Sneakers",
                     QuantityInStock = 999
                 },
                 new Product
                 {
-                    Name = "Adidas",
+                    Name = "Vans old skool Mid",
                     Description ="Shoe Description to be added",
                     Price = 8990,
-                    ImageUrl = "/images/products/hat-NewBalance9.png",
-                    Brand = "New Balance",
-                    Type = "Shoes",
+                    ImageUrl = "/images/products/8.jpeg",
+                    Brand = "Vans",
+                    Type = "Sneakers",
                     QuantityInStock = 999
                 },
                 new Product
                 {
-                    Name = "Adidas",
+                    Name = "Vans Leather",
                     Description ="Shoe Description to be added",
                     Price = 9599,
-                    ImageUrl = "/images/products/hat-NewBalance2.png",
-                    Brand = "New Balance",
-                    Type = "Shoes",
+                    ImageUrl = "/images/products/9.jpeg",
+                    Brand = "Vans",
+                    Type = "Sneakers",
                     QuantityInStock = 999
                 },
                 new Product
@@ -109,7 +109,7 @@ namespace API.Data
                     Name = "Adidas Yeezy Boost 350 V2",
                     Description ="Shoe Description to be added",
                     Price = 9899,
-                    ImageUrl = "/images/products/glove-code9.png",
+                    ImageUrl = "/images/products/10.jpeg",
                     Brand = "Adidas",
                     Type = "Sneakers",
                     QuantityInStock = 999
@@ -119,17 +119,17 @@ namespace API.Data
                     Name = "Adidas Yeezy Boost 700",
                     Description ="Shoe Description to be added",
                     Price = 9599,
-                    ImageUrl = "/images/products/glove-code2.png",
+                    ImageUrl = "/images/products/11.jpeg",
                     Brand = "Adidas",
                     Type = "Sneakers",
                     QuantityInStock = 999
                 },
                 new Product
                 {
-                    Name = "Adidas Yeezy Slides",
+                    Name = "Adidas Yeezy Slides Azure",
                     Description ="Shoe Description to be added",
                     Price = 9699,
-                    ImageUrl = "/images/products/glove-NewBalance9.png",
+                    ImageUrl = "/images/products/12.jpeg",
                     Brand = "Adidas",
                     Type = "Slides",
                     QuantityInStock = 999
@@ -139,59 +139,89 @@ namespace API.Data
                     Name = "Adidas Yeezy Slides Onyx",
                     Description ="Shoe Description to be added",
                     Price = 9499,
-                    ImageUrl = "/images/products/glove-NewBalance2.png",
-                    Brand = "NewBalance",
+                    ImageUrl = "/images/products/13.webp",
+                    Brand = "Adidas",
                     Type = "Slides",
                     QuantityInStock = 999
                 },
                 new Product
                 {
-                    Name = "Puma ",
+                    Name = "Puma Trainer",
                     Description ="Shoe Description to be added",
                     Price = 25990,
-                    ImageUrl = "/images/products/boot-redis9.png",
+                    ImageUrl = "/images/products/14.jpeg",
                     Brand = "Puma",
-                    Type = "Trainer Shoes",
+                    Type = "Sport Shoes",
                     QuantityInStock = 999
                 },
                 new Product
                 {
-                    Name = "Puma ",
+                    Name = "Puma Runner",
                     Description ="New Balance Canvas Trainer",
                     Price = 98999,
-                    ImageUrl = "/images/products/boot-core2.png",
-                    Brand = "New Balance",
-                    Type = "Trainer Shoes",
+                    ImageUrl = "/images/products/15.jpeg",
+                    Brand = "Puma",
+                    Type = "Sport Shoes",
                     QuantityInStock = 999
                 },
                 new Product
                 {
-                    Name = "Puma ",
+                    Name = "Puma Sneaker",
                     Description ="Shoe Description to be added",
                     Price = 99999,
-                    ImageUrl = "/images/products/boot-core9.png",
-                    Brand = "New Balance",
-                    Type = "Trainer Shoes",
+                    ImageUrl = "//images/products/16.png",
+                    Brand = "Puma",
+                    Type = "Sneakers",
                     QuantityInStock = 999
                 },
                 new Product
                 {
-                    Name = "Nike Jordan 1",
+                    Name = "Nike Jordan 1 Low",
                     Description = "Shoe Description to be added",
                     Price = 95990,
-                    ImageUrl = "/images/products/boot-ang2.png",
+                    ImageUrl = "/images/products/17.jpeg",
                     Brand = "Nike",
-                    Type = "Basketball Shoes",
+                    Type = "Sneakers",
                     QuantityInStock = 999
                 },
                 new Product
                 {
-                    Name = "Nike Jordan 2",
+                    Name = "Nike Jordan 1 High",
                     Description ="Shoe Description to be added",
                     Price = 98990,
-                    ImageUrl = "/images/products/boot-ang9.png",
+                    ImageUrl = "/images/products/18.jpeg",
                     Brand = "Nike",
-                    Type = "Basketball Shoes",
+                    Type = "Sneakers",
+                    QuantityInStock = 999
+                },
+                new Product
+                {
+                    Name = "Converse Chuck Taylor 70",
+                    Description ="Shoe Description to be added",
+                    Price = 98990,
+                    ImageUrl = "/images/products/19.jpeg",
+                    Brand = "Converse",
+                    Type = "Sneakers",
+                    QuantityInStock = 999
+                },
+                new Product
+                {
+                    Name = "Converse Chuck Taylor All Star",
+                    Description ="Shoe Description to be added",
+                    Price = 98990,
+                    ImageUrl = "/images/products/20.jpeg",
+                    Brand = "Converse",
+                    Type = "Sneakers",
+                    QuantityInStock = 999
+                },
+                new Product
+                {
+                    Name = "Converse Chuck Taylor Mid",
+                    Description ="Shoe Description to be added",
+                    Price = 98990,
+                    ImageUrl = "/images/products/21.jpeg",
+                    Brand = "Converse",
+                    Type = "Sneakers",
                     QuantityInStock = 999
                 },
             };
