@@ -26,7 +26,7 @@ export default function LoginPage()
       <div className='LoginBox'>
         <div className='LoginHeader'>Login</div>
         <div className='options-container'>
-        <label htmlFor="userRole">Select a role:</label>
+        <label htmlFor="userRole" className="bold-label">Select a role:</label>
         <select id="userRole" defaultValue={"Admin"} onChange={(e) => {
         e.target.value === "Admin" ? setIsadmin(true) : setIsadmin(false);
         console.log(e.target.value);
@@ -47,7 +47,7 @@ export default function LoginPage()
           placeholder="Enter your password" 
           />
           <Button variant = "contained" className='btn-submit' type='submit'>Submit</Button>
-            </form>
+        </form>
           </div>
 
           <Typography style={{display:"flex" , justifyContent:"center"}}>

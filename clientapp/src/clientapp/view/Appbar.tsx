@@ -26,11 +26,11 @@ const featureLinks = [
     path: "/aboutus",
   },
   {
-    title: "contactus",
+    title: "Contactus",
     path: "/contactus",
   },
   {
-    title: "productcatalog",
+    title: "Productcatalog",
     path: "/productcatalog",
   },
 ];
