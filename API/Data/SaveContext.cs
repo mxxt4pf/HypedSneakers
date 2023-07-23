@@ -13,6 +13,7 @@ namespace API.Data
         {
         }
         public DbSet<Product> Products { get; set; } //represent the table for products
-        public DbSet<ShoppingCart> Carts {get; set;} //table for shopping cart
-}
+        public DbSet<ShoppingCart> Carts { get; set; } //table for shopping cart
+
+    }
 }
