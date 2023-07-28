@@ -18,6 +18,8 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.14.1",
     "react-scripts": "5.0.1",
+    "save-dev": "^0.0.1-security",
+    "ts-loader": "^9.4.4",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
@@ -46,7 +48,7 @@
     ]
   },
   "devDependencies": {
-    "@types/react": "^18.2.15",
+    "@types/react": "^18.2.16",
     "@types/react-dom": "^18.2.7"
   }
 }
