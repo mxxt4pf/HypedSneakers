@@ -30,9 +30,12 @@ export default function ItemCard({ product }: Props) {
 
   function manipulateAddCartItems(itemId: number) {
     SetBuffering(true);
+
     //no quantity parameter as their is a default value in the base function
     axiosAPI.ShoppingCart.addItem(itemId)
+
       .catch((error) => console.log(error))
+
       .finally(() => SetBuffering(false));
   }
   return (
@@ -41,21 +44,23 @@ export default function ItemCard({ product }: Props) {
     <Card>
       <CardHeader
         avatar={
-          <Avatar sx={{ backgroundColor: "pink" }}>
+          <Avatar sx={{ backgroundColor: "red" }}>
             {product.name.charAt(0).toUpperCase()}
           </Avatar>
         }
         title={product.name}
       ></CardHeader>
+
       <CardMedia
         sx={{
           backgroundSize: "contain",
           height: 129,
-          backgroundColor: "beige",
+          backgroundColor: "pink",
         }}
         image={product.imageUrl}
         title={product.name}
       ></CardMedia>
+
       <CardContent>
         <Typography
           gutterBottom
@@ -78,6 +83,7 @@ export default function ItemCard({ product }: Props) {
       <CardActions>
         <Box display={"flex"} alignItems={"left"}>
           <Button
+            //For add items button under product catalog
             onClick={() => manipulateAddCartItems(product.id)}
             size="medium"
           >
@@ -88,6 +94,7 @@ export default function ItemCard({ product }: Props) {
         <Box>
           <Button
             size="medium"
+            //Linking the preview item to product catalog for fetching items
             component={Link}
             to={`/productcatalog/${product.id}`} //Item details baseed on item id
           >

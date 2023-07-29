@@ -8,8 +8,12 @@ namespace API.Entities
     public class ShoppingCart
     {
         public int Id {get; set;} 
+
         public string UserId {get; set;}
+
         public List<ShoppingCartItem> CartItems {get; set;} = new List<ShoppingCartItem>(); //would make new list of products for everytime a new cart is created for shopping
+
+        //item add function
       public void AddCartItem(Product product, int quantity)
         {
             if (CartItems.All(item => item.Id != product.Id))
@@ -24,6 +28,7 @@ namespace API.Entities
                 presentItem.PurchasedQuantity = presentItem.PurchasedQuantity + quantity;
             }
     }
+        //item remove function
          public void RemoveCartItem(int Id, int quantity = 1)
         {
             var removeItem = CartItems.FirstOrDefault(cartItem => cartItem.ItemId == Id);

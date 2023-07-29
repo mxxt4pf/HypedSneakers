@@ -5,41 +5,46 @@ import {
   TableBody,
   TableRow,
   TableCell,
+  Card,
 } from "@mui/material";
 import { useSaveContext } from "../..//clientapp/SaveContext/SaveContext";
-import { currencyFormat } from "../..//clientapp/utilities/utillities";
+import { rateIndent } from "../..//clientapp/utilities/utillities";
 import { fontGrid } from "@mui/material/styles/cssUtils";
 
 export default function CartSummary() {
   const { Cart } = useSaveContext();
+
   const itemtotal =
     Cart?.cartItems.reduce(
-      (total, items) => total + items.purchasedQuantity * items.price,
+      (total, items) => total + items.price * items.purchasedQuantity,
+
       0
     ) ?? 0;
+
   const deliveryCharges = itemtotal > 50000 ? 0 : 500;
 
   return (
     <>
-      <TableContainer component={Paper} variant={"outlined"}>
+      <TableContainer component={Card} variant={"outlined"}>
         <Table>
           <TableBody>
             <TableRow>
-              <TableCell colSpan={2}>Item Total</TableCell>
-              <TableCell align="right">{currencyFormat(itemtotal)}</TableCell>
+              <TableCell colSpan={4}>Item Total</TableCell>
+              <TableCell align="right">{rateIndent(itemtotal)}</TableCell>
             </TableRow>
+
             <TableRow>
-              <TableCell colSpan={2}>Delivery Charges*</TableCell>
+              <TableCell colSpan={4}>Delivery Charges*</TableCell>
+              <TableCell align="right">{rateIndent(deliveryCharges)}</TableCell>
+            </TableRow>
+
+            <TableRow>
+              <TableCell colSpan={4}>Order Total</TableCell>
               <TableCell align="right">
-                {currencyFormat(deliveryCharges)}
+                {rateIndent(itemtotal + deliveryCharges)}
               </TableCell>
             </TableRow>
-            <TableRow>
-              <TableCell colSpan={2}>Order Total</TableCell>
-              <TableCell align="right">
-                {currencyFormat(itemtotal + deliveryCharges)}
-              </TableCell>
-            </TableRow>
+
             <TableRow>
               <TableCell>
                 <span style={{ fontStyle: "initial" }}>

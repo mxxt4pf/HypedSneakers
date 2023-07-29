@@ -14,18 +14,23 @@ import { Outlet } from "react-router-dom";
 import { useSaveContext } from "../SaveContext/SaveContext";
 import axios from "axios";
 import axiosAPI from "../clientAPI/Axios";
-import { getCookie } from "../utilities/utillities";
+import { fetchCookies } from "../utilities/utillities";
 
 function ClientApp() {
   const { setCart } = useSaveContext();
+
   const [buffering, setBuffering] = useState(true);
 
   useEffect(() => {
-    const userId = getCookie("userId");
+    const userId = fetchCookies("userId");
+
     if (userId) {
       axiosAPI.ShoppingCart.get()
+
         .then((cart) => setCart(cart))
+
         .catch((error) => console.log(error))
+
         .finally(() => setBuffering(false));
     } else {
       setBuffering(false);
@@ -33,6 +38,7 @@ function ClientApp() {
   }, [setCart]);
 
   const [modeType, setModeType] = useState(false);
+
   const themeType = modeType ? "dark" : "light";
 
   function themeSwitch() {
@@ -44,6 +50,7 @@ function ClientApp() {
       background: {
         default: themeType == "light" ? "#9b9b9b" : "#333333",
       },
+
       mode: themeType,
     },
   });
@@ -52,7 +59,9 @@ function ClientApp() {
     <div>
       <ThemeProvider theme={theme}>
         <CssBaseline> </CssBaseline>
+
         <Appbar themeMode={modeType} themeSwitch={themeSwitch}></Appbar>
+
         <Container>
           <Outlet />
         </Container>

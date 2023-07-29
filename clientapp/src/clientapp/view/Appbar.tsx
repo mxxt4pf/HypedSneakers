@@ -48,15 +48,18 @@ const signupLinks = [
 
 export default function Appbar({ themeMode, themeSwitch }: Props) {
   const { Cart } = useSaveContext();
+
   const itemCount = Cart?.cartItems.reduce(
     (sum, item) => sum + item.purchasedQuantity,
+
     0
   );
+
   return (
     //Setting margin border for the navigation bar using mb
     <AppBar
       position="relative"
-      sx={{ mb: 8, color: "purple", fontPalette: "dark" }}
+      sx={{ mb: 8, color: "black", fontPalette: "dark" }}
     >
       <Toolbar
         variant="dense"
@@ -80,7 +83,7 @@ export default function Appbar({ themeMode, themeSwitch }: Props) {
             component={NavLink}
             to="/"
           >
-            HYPEDSNEAKERS
+            HypedSneakers
           </Typography>
           <Switch
             checked={themeMode}
@@ -103,7 +106,7 @@ export default function Appbar({ themeMode, themeSwitch }: Props) {
               key={path}
               sx={{
                 "&:hover": {
-                  color: "skyblue",
+                  color: "red",
                   cursor: "pointer",
                 },
                 typography: "h5",

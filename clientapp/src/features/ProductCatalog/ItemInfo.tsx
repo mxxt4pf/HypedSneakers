@@ -20,6 +20,7 @@ import { useSaveContext } from "../../clientapp/SaveContext/SaveContext";
 
 export default function ItemInfo() {
   const { Cart, setCart, removeItem } = useSaveContext();
+
   /* always gonna be a string as coming from router */
   const { id } = useParams<{ id: string }>();
 
@@ -40,6 +41,7 @@ export default function ItemInfo() {
     if (item) {
       setQuantity(item.purchasedQuantity);
     }
+
     //"&&" defensive programming to predeclare id before using it in react 18 because threw the error type undefined while directly doing it
     id &&
       axiosAPI.ProductCatalog.productInfo(parseInt(id))
@@ -50,25 +52,38 @@ export default function ItemInfo() {
 
         .finally(() => setBuffering(false));
   }, [id]); //here, id would be the dependency
+
   function manipulateChangeInput(e: any) {
     if (e.target.value >= 0) setQuantity(parseInt(e.target.value));
   }
 
+  //function for updating cart items when an item is added
   function manipulateCartUpdate() {
     setSubmitting(true);
+
     if (!item || quantity > item?.purchasedQuantity) {
       const updatedQuantity = item
         ? quantity - item.purchasedQuantity
         : quantity;
+
+      //for adding items to the cart
       axiosAPI.ShoppingCart.addItem(items?.id!, updatedQuantity)
+
         .then((Cart) => setCart(Cart))
+
         .catch((error) => console.log(error))
+
         .finally(() => setSubmitting(false));
     } else {
+      //for removing items from the cart
       const updatedQuantity = item.purchasedQuantity - quantity;
+
       axiosAPI.ShoppingCart.deleteItem(item?.itemId!, updatedQuantity)
+
         .then(() => removeItem(item?.itemId!, updatedQuantity))
+
         .catch((error: any) => console.log(error))
+
         .finally(() => setSubmitting(false));
     }
   }
@@ -81,15 +96,16 @@ export default function ItemInfo() {
     return <Typography variant="h2"> Buffering is taking place</Typography>;
   } else
     return (
-      <Grid container spacing={5}>
-        <Grid item sm={5}>
+      <Grid container spacing={1}>
+        <Grid item sm={1}>
           <img
             src={item?.imageUrl}
             alt={item?.name}
-            style={{ maxWidth: "99%" }}
+            style={{ maxWidth: "250%" }}
           ></img>
         </Grid>
-        <Grid item sm={5}>
+
+        <Grid item sm={20}>
           <Typography variant="h4">{items?.name}</Typography>
           <Divider sx={{ marginborder: 0 }}></Divider>
           <Typography variant="h5" sx={{ color: "blue", fontSize: "10" }}>
@@ -101,18 +117,22 @@ export default function ItemInfo() {
                 <TableCell>Name</TableCell>
                 <TableCell>{items?.name}</TableCell>
               </TableRow>
+
               <TableRow>
                 <TableCell>Brand</TableCell>
                 <TableCell>{items?.brand}</TableCell>
               </TableRow>
+
               <TableRow>
                 <TableCell>Type of the Item</TableCell>
                 <TableCell>{items?.type}</TableCell>
               </TableRow>
+
               <TableRow>
                 <TableCell>Item Description</TableCell>
                 <TableCell>{items?.description}</TableCell>
               </TableRow>
+
               <TableRow>
                 <TableCell>Available Stock</TableCell>
                 <TableCell>{items?.quantityInStock}</TableCell>
@@ -139,7 +159,7 @@ export default function ItemInfo() {
                 <Button
                   disabled={
                     items?.quantityInStock === quantity ||
-                    (!items && quantity === 0)
+                    (items == null && quantity === 0)
                   }
                   onClick={manipulateCartUpdate}
                   sx={{ height: "55px" }}

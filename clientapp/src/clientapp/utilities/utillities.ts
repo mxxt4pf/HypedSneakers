@@ -1,8 +1,9 @@
-export function getCookie(key: string) {
-  const b = document.cookie.match("(^|;)\\s*" + key + "\\s*=\\s*([^;]+)");
-  return b ? b.pop() : "";
+export function fetchCookies(key: string) {
+  const x = document.cookie.match("(^|;)\\s*" + key + "\\s*=\\s*([^;]+)");
+
+  return x ? x.pop() : "";
 }
 
-export function currencyFormat(amount: number) {
-  return "$" + (amount / 100).toFixed(2);
+export function rateIndent(amount: number) {
+  return "$" + amount.toFixed(3);
 }

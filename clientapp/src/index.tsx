@@ -14,6 +14,7 @@ import { SaveContextProvider } from "./clientapp/SaveContext/SaveContext";
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
     <SaveContextProvider>

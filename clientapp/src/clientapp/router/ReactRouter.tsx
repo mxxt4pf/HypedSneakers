@@ -6,9 +6,10 @@ import About from "../../features/About/About";
 import ContactUs from "../../features/ContactUs/ContactUs";
 import App from "../view/App";
 import CartPage from "../../features/cart/CartPage";
-import Checkout from "../../features/checkout/Checkout";
+import Checkout from "../../features/checkout/CheckoutPage";
 import LoginPage from "../../features/Login/LoginPage";
 import { Signup } from "../../features/SignUp/SignUp";
+import CheckoutPage from "../../features/checkout/CheckoutPage";
 
 export const router = createBrowserRouter([
   {
@@ -38,8 +39,8 @@ export const router = createBrowserRouter([
         element: <CartPage></CartPage>,
       },
       {
-        path: "checkout",
-        element: <Checkout></Checkout>,
+        path: "checkoutpage",
+        element: <CheckoutPage></CheckoutPage>,
       },
       {
         path: "login",

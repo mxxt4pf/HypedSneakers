@@ -19,6 +19,7 @@ export default function ProductCatalog() {
   built array by states functionality of React Hooks
   */
   const [products, setProducts] = useState<Product[]>([]);
+
   const [buffering, setBuffering] = useState(true);
 
   /*
@@ -30,8 +31,11 @@ export default function ProductCatalog() {
    */
   useEffect(() => {
     axiosAPI.ProductCatalog.productList()
+
       .then((products) => setProducts(products))
+
       .catch((error) => console.log(error))
+
       .finally(() => setBuffering(false));
   }, []);
 

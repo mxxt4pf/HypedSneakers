@@ -1,9 +1,12 @@
 import { createContext, PropsWithChildren, useContext, useState } from "react";
+
 import { Cart } from "../model/ShoppingCart";
 
 interface SaveContextValue {
   Cart: Cart | null;
+
   setCart: (Cart: Cart) => void;
+
   removeItem: (itemId: number, purchasedQuantity: number) => void;
 }
 
@@ -26,11 +29,16 @@ export function SaveContextProvider({ children }: PropsWithChildren<any>) {
 
   function removeItem(itemId: number, purchasedQuantity: number) {
     if (!Cart) return;
-    const items = [...Cart.cartItems]; // new array of items
+
+    const items = [...Cart.cartItems];
+
     const itemIndex = items.findIndex((i) => i.itemId === itemId);
+
     if (itemIndex >= 0) {
       items[itemIndex].purchasedQuantity -= purchasedQuantity;
+
       if (items[itemIndex].purchasedQuantity === 0) items.splice(itemIndex, 1);
+
       setCart((prevState) => {
         return { ...prevState!, items };
       });

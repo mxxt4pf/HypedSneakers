@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  Card,
   Grid,
   IconButton,
   Link,
@@ -49,9 +50,12 @@ export default function CartPage() {
   and initialliy it would be null as we are assumign no items added at start*/
 
   const [buffering, setBuffering] = useState(true);
+
   const { Cart, setCart, removeItem } = useSaveContext();
+
   const [status, setStatus] = useState({
     loading: false,
+
     name: "",
   });
 
@@ -68,19 +72,27 @@ export default function CartPage() {
   if (buffering)
     return <Typography variant="h2"> Buffering is going on!</Typography>;
 
-  function handleAddItem(itemId: number, name: string) {
+  function manipulateAddCartItem(itemId: number, name: string) {
     setStatus({ loading: true, name });
+
     axiosAPI.ShoppingCart.addItem(itemId)
+
       .then((Cart) => setCart(Cart))
+
       .catch((error) => console.log(error))
+
       .finally(() => setStatus({ loading: false, name: "" }));
   }
 
-  function handleRemoveItem(itemId: number, quantity = 1, name: string) {
+  function manipulateRemoveItem(itemId: number, quantity = 1, name: string) {
     setStatus({ loading: true, name });
+
     axiosAPI.ShoppingCart.deleteItem(itemId, quantity)
+
       .then(() => removeItem(itemId, quantity))
+
       .catch((error: any) => console.log(error))
+
       .finally(() => setStatus({ loading: false, name: "" }));
   }
 
@@ -88,38 +100,50 @@ export default function CartPage() {
 
   return (
     <>
-      <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 700 }} aria-label="customized table">
-          <TableHead>
+      <TableContainer component={Card}>
+        <Table sx={{ minWidth: 850, borderColor: "white", borderWidth: "5" }}>
+          <TableHead sx={{ bgcolor: "gray" }}>
             <TableRow>
-              <StyledTableCell>Item</StyledTableCell>
-              <StyledTableCell align="right">Price</StyledTableCell>
-              <StyledTableCell align="right">Quantity</StyledTableCell>
-              <StyledTableCell align="right">Total</StyledTableCell>
-              <StyledTableCell align="right"></StyledTableCell>
+              <StyledTableCell>Purchased Item</StyledTableCell>
+
+              <StyledTableCell align="center">Price</StyledTableCell>
+
+              <StyledTableCell align="center">Quantity</StyledTableCell>
+
+              <StyledTableCell align="center">Total</StyledTableCell>
+
+              <StyledTableCell align="center">
+                Delete Purchased Items?
+              </StyledTableCell>
             </TableRow>
           </TableHead>
-          <TableBody>
+
+          <TableBody sx={{ bgcolor: "lightblue" }}>
             {Cart.cartItems.map((items) => (
               <TableRow
                 key={items.itemId}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                sx={{ "&:last-child td, &:last-child th": {} }}
               >
                 <TableCell component="th" scope="row">
                   <Box display="flex" alignItems="center">
                     <img
-                      style={{ height: 50, marginRight: 20 }}
+                      style={{ height: 45, marginRight: 25 }}
                       src={items.imageUrl}
                       alt={items.name}
                     />
                     <span>{items.name}</span>
                   </Box>
                 </TableCell>
+
                 <TableCell align="right">${items.price.toFixed(2)}</TableCell>
                 <TableCell align="center">
                   <Button
                     onClick={() =>
-                      handleRemoveItem(items.itemId, 1, "rem" + items.itemId)
+                      manipulateRemoveItem(
+                        items.itemId,
+                        1,
+                        "rem" + items.itemId
+                      )
                     }
                     color="error"
                   >
@@ -128,20 +152,22 @@ export default function CartPage() {
                   {items.purchasedQuantity}
                   <Button
                     onClick={() =>
-                      handleAddItem(items.itemId, "add" + items.itemId)
+                      manipulateAddCartItem(items.itemId, "add" + items.itemId)
                     }
                     color="secondary"
                   >
                     <Add />
                   </Button>
                 </TableCell>
-                <TableCell align="right">
-                  ${((items.price / 100) * items.purchasedQuantity).toFixed(2)}
+
+                <TableCell align="center">
+                  ${(items.price / 100) * items.purchasedQuantity}
                 </TableCell>
-                <TableCell align="right">
+
+                <TableCell align="center">
                   <Button
                     onClick={() =>
-                      handleRemoveItem(
+                      manipulateRemoveItem(
                         items.itemId,
                         items.purchasedQuantity,
                         "del" + items.itemId
@@ -157,18 +183,20 @@ export default function CartPage() {
           </TableBody>
         </Table>
       </TableContainer>
+
       <Grid container>
         <Grid item xs={6} />
         <Grid item xs={6}>
           <CartSummary />
           <Button
             component={NavLink}
-            to="/checkout"
-            variant="contained"
-            size="large"
+            to="/checkoutpage"
             fullWidth
+            variant="contained"
+            size="small"
+            sx={{ bgcolor: "pink" }}
           >
-            Checkout
+            Proceed to Checkout!
           </Button>
         </Grid>
       </Grid>

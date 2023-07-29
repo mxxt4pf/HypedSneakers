@@ -77,7 +77,7 @@ namespace API.Controllers
         }
 
 
-        
+        //for deleting the item from the shopping cart
         [HttpDelete]
         public async Task<ActionResult> DeleteCartItem(int itemId, int quantity = 1)
         {
@@ -98,7 +98,8 @@ namespace API.Controllers
             }
             return BadRequest("Bad Request Occured! Issue storing cart items!");
         }
-
+        
+        //fetching cart items from existing cart
 
           private async Task<ShoppingCart> RetrieveCart(string userId)
         {

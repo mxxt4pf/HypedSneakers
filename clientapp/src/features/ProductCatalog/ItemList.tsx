@@ -16,7 +16,7 @@ interface Props {
 export default function ItemList({ products }: Props) {
   return (
     //theme spacing material UI
-    <Grid container spacing={5}>
+    <Grid container spacing={4}>
       {products.map((product) => (
         //setting number of columns
         <Grid item xs={3} key={product.id}>
