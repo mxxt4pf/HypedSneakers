@@ -81,7 +81,7 @@ p, div {
   .password {
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     width: 100%;
   }
    
