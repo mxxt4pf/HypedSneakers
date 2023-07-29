@@ -2,6 +2,8 @@ using API.Data;
 using API.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using API.FeatureExt;
+
 
 namespace API.Controllers
 {
@@ -20,17 +22,28 @@ namespace API.Controllers
         }
         //gets all the products of the database
         [HttpGet] 
-        public async Task<ActionResult<List<Product>>> GetProducts()
+        public async Task<ActionResult<Product>>GetProducts()
         {
-            var products = await _context.Products.ToListAsync();
+                 var products = await _context.Products.ToListAsync();
             return Ok(products);
         }
 
+
         //api/products/for each product based on the id input
         [HttpGet("{id}")] 
-        public async Task<Product> GetProduct(int id)
+        public async Task<ActionResult<Product>> GetProduct(int id)
         {
+            
             return await _context.Products.FindAsync(id);
+
+            var item = await _context.Products.FindAsync(id);
+
+            if(item == null) 
+            {
+                return BadRequest();
+            }
+            return item;
         }
+        
     }
 }

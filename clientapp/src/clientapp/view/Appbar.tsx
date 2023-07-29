@@ -14,6 +14,7 @@ import {
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import { Link, NavLink } from "react-router-dom";
+import { useSaveContext } from "../SaveContext/SaveContext";
 
 interface Props {
   themeMode: boolean;
@@ -46,6 +47,11 @@ const signupLinks = [
 ];
 
 export default function Appbar({ themeMode, themeSwitch }: Props) {
+  const { Cart } = useSaveContext();
+  const itemCount = Cart?.cartItems.reduce(
+    (sum, item) => sum + item.purchasedQuantity,
+    0
+  );
   return (
     //Setting margin border for the navigation bar using mb
     <AppBar
@@ -117,7 +123,7 @@ export default function Appbar({ themeMode, themeSwitch }: Props) {
             sx={{ color: "darkgray", margin: 1 }}
           >
             <Badge
-              badgeContent="5"
+              badgeContent={itemCount}
               sx={{
                 display: "flex",
                 alignItems: "flex-end",

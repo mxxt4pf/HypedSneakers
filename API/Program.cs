@@ -1,6 +1,7 @@
 //Creating a web application host
 using API.Data;
 using Microsoft.EntityFrameworkCore;
+using API.ExceptionsBreakpoint;
 
 var builder = WebApplication.CreateBuilder(args); 
 
@@ -22,15 +23,17 @@ builder.Services.AddCors();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
+app.UseMiddleware<BreakpointExp>();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 //for enabling CORS header send back to clientapp
+//AllowCredentials to allow client to pass cookie backward and forward
 app.UseCors(opt => 
 {
-    opt.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:3000");
+    opt.AllowAnyHeader().AllowAnyMethod().AllowCredentials().WithOrigins("http://localhost:3000");
 });
 app.UseAuthorization();
 

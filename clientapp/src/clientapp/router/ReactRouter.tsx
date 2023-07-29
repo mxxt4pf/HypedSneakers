@@ -6,6 +6,9 @@ import About from "../../features/About/About";
 import ContactUs from "../../features/ContactUs/ContactUs";
 import App from "../view/App";
 import CartPage from "../../features/cart/CartPage";
+import Checkout from "../../features/checkout/Checkout";
+import LoginPage from "../../features/Login/LoginPage";
+import { Signup } from "../../features/SignUp/SignUp";
 
 export const router = createBrowserRouter([
   {
@@ -33,6 +36,18 @@ export const router = createBrowserRouter([
       {
         path: "cartpage",
         element: <CartPage></CartPage>,
+      },
+      {
+        path: "checkout",
+        element: <Checkout></Checkout>,
+      },
+      {
+        path: "login",
+        element: <LoginPage></LoginPage>,
+      },
+      {
+        path: "signup",
+        element: <Signup></Signup>,
       },
     ],
   },

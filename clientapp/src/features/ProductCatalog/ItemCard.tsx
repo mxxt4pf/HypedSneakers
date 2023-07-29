@@ -17,12 +17,24 @@ import { Link } from "react-router-dom";
 import ProductCatalog from "./ProductCatalog";
 import ItemInfo from "./ItemInfo";
 import { AlignHorizontalLeft, ForkLeft } from "@mui/icons-material";
+import { useState } from "react";
+import axiosAPI from "../../clientapp/clientAPI/Axios";
+import { error } from "console";
 
 interface Props {
   product: Product;
 }
 
 export default function ItemCard({ product }: Props) {
+  const [buffering, SetBuffering] = useState(false);
+
+  function manipulateAddCartItems(itemId: number) {
+    SetBuffering(true);
+    //no quantity parameter as their is a default value in the base function
+    axiosAPI.ShoppingCart.addItem(itemId)
+      .catch((error) => console.log(error))
+      .finally(() => SetBuffering(false));
+  }
   return (
     /*Material UI Card Component for adding every specific item to our Product Catalog 
     sx={{ maxWidth: 345 }}*/
@@ -65,7 +77,12 @@ export default function ItemCard({ product }: Props) {
 
       <CardActions>
         <Box display={"flex"} alignItems={"left"}>
-          <Button size="medium">Add Item</Button>
+          <Button
+            onClick={() => manipulateAddCartItems(product.id)}
+            size="medium"
+          >
+            Add Item
+          </Button>
         </Box>
 
         <Box>

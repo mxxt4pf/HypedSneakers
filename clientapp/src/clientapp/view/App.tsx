@@ -11,8 +11,27 @@ import {
 import Appbar from "./Appbar";
 import { dark, light } from "@mui/material/styles/createPalette";
 import { Outlet } from "react-router-dom";
+import { useSaveContext } from "../SaveContext/SaveContext";
+import axios from "axios";
+import axiosAPI from "../clientAPI/Axios";
+import { getCookie } from "../utilities/utillities";
 
 function ClientApp() {
+  const { setCart } = useSaveContext();
+  const [buffering, setBuffering] = useState(true);
+
+  useEffect(() => {
+    const userId = getCookie("userId");
+    if (userId) {
+      axiosAPI.ShoppingCart.get()
+        .then((cart) => setCart(cart))
+        .catch((error) => console.log(error))
+        .finally(() => setBuffering(false));
+    } else {
+      setBuffering(false);
+    }
+  }, [setCart]);
+
   const [modeType, setModeType] = useState(false);
   const themeType = modeType ? "dark" : "light";
 

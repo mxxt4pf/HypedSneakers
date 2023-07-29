@@ -9,6 +9,9 @@ import {
   ListItemText,
 } from "@mui/material";
 import ItemList from "./ItemList";
+import axios from "axios";
+import axiosAPI from "../../clientapp/clientAPI/Axios";
+import { error } from "console";
 
 //remove props if in refactoring for destructuring products,addproducts
 export default function ProductCatalog() {
@@ -16,6 +19,7 @@ export default function ProductCatalog() {
   built array by states functionality of React Hooks
   */
   const [products, setProducts] = useState<Product[]>([]);
+  const [buffering, setBuffering] = useState(true);
 
   /*
     call back function and then the dependencies(empty array) 
@@ -25,9 +29,10 @@ export default function ProductCatalog() {
     and using use state for updating component to rerender
    */
   useEffect(() => {
-    fetch("http://localhost:5000/api/products")
-      .then((response) => response.json())
-      .then((data) => setProducts(data));
+    axiosAPI.ProductCatalog.productList()
+      .then((products) => setProducts(products))
+      .catch((error) => console.log(error))
+      .finally(() => setBuffering(false));
   }, []);
 
   return (

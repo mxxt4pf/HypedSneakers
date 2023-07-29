@@ -9,3 +9,12 @@ export interface Product {
   imageUrl: string;
   quantityInStock?: number;
 }
+
+export interface ItemParams {
+  orderBy: string;
+  searchFilter?: string;
+  types: string[];
+  brands: string[];
+  pageOrder: number;
+  pageLength: number;
+}

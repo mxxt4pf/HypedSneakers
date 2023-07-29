@@ -7,7 +7,7 @@ namespace API.Entities
     public class ShoppingCartItem
     {
         public int Id {get; set;}
-        public int purchasedQuantity {get; set;}
+        public int PurchasedQuantity {get; set;}
 
         //would show only item ID but not property
         public int ItemId{get; set;}

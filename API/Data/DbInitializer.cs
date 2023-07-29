@@ -16,7 +16,7 @@ namespace API.Data
             {
                 new Product
                 {
-                    Name = "Nike Blazer Mid",
+                    Name = "Nike Blazer",
                     Description ="Workout shoe and tennis purpose.",
                     Price = 99,
                     ImageUrl = "/images/products/1nikeblazer.jpeg",

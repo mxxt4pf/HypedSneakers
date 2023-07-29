@@ -14,14 +14,14 @@ namespace API.Entities
         {
             if (CartItems.All(item => item.Id != product.Id))
             {
-                CartItems.Add(new ShoppingCartItem { Product = product, purchasedQuantity = quantity });
+                CartItems.Add(new ShoppingCartItem { Product = product, PurchasedQuantity = quantity });
                 return;
             }
             var presentItem = CartItems.FirstOrDefault(item => item.ItemId == product.Id);
 
             if (presentItem != null) 
             {
-                presentItem.purchasedQuantity = presentItem.purchasedQuantity + quantity;
+                presentItem.PurchasedQuantity = presentItem.PurchasedQuantity + quantity;
             }
     }
          public void RemoveCartItem(int Id, int quantity = 1)
@@ -32,8 +32,8 @@ namespace API.Entities
             {
                 return;
             }
-            removeItem.purchasedQuantity -= quantity;
-            if (removeItem.purchasedQuantity == 0) 
+            removeItem.PurchasedQuantity -= quantity;
+            if (removeItem.PurchasedQuantity == 0) 
             {
                 CartItems.Remove(removeItem);
         }

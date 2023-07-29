@@ -9,13 +9,16 @@ import App from "./clientapp/view/App";
 import reportWebVitals from "./reportWebVitals";
 import { router } from "./clientapp/router/ReactRouter";
 import { BrowserRouter, RouterProvider } from "react-router-dom";
+import { SaveContextProvider } from "./clientapp/SaveContext/SaveContext";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <SaveContextProvider>
+      <RouterProvider router={router} />
+    </SaveContextProvider>
   </React.StrictMode>
 );
 
