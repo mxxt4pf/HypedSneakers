@@ -23,25 +23,25 @@ interface Props {
 
 const featureLinks = [
   {
-    title: "aboutus",
+    title: "Aboutus",
     path: "/aboutus",
   },
   {
-    title: "contactus",
+    title: "Contactus",
     path: "/contactus",
   },
   {
-    title: "productcatalog",
+    title: "Productcatalog",
     path: "/productcatalog",
   },
 ];
 const signupLinks = [
   {
-    title: "login",
+    title: "Login",
     path: "/login",
   },
   {
-    title: "signup",
+    title: "Signup",
     path: "/signup",
   },
 ];
