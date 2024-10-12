@@ -1,4 +1,4 @@
-# HypedSneakers
+# E-Commerce Web Application: HypedSneakers
 Group based class project towards a real-life working e-commerce web application letting clients purchase the "Hyped" products they're looking 
 for in the market by creating their own account with credentials, adding/removing orders from the shopping cart, 
 making payments using their preferred mode of payment, and much more. 
